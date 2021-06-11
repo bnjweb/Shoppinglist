@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D3D3D3">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/rectangle"
+    android:windowSoftInputMode="adjustPan"
+    tools:context="com.example.shoppinglist.Fragments.add.AddFragment">
+
+
+    <TextView
+        android:id="@+id/Headline_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mont"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/add_item"
+        android:textColor="#000"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Name_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/add_name"
+        android:textSize="20sp"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="@+id/Name_ET"
+        app:layout_constraintTop_toBottomOf="@+id/Headline_TV" />
+
+    <EditText
+        android:id="@+id/Name_ET"
+        android:layout_width="330dp"
+        android:layout_height="40dp"
+        android:background="@drawable/input"
+        android:ems="10"
+        android:hint="@string/name"
+        android:layout_marginTop="12dp"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name_TV"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/shop_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/where_to_buy"
+        android:textSize="20sp"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="@id/shop_ET"
+        app:layout_constraintTop_toBottomOf="@id/Name_ET" />
+
+    <EditText
+        android:id="@+id/shop_ET"
+        android:layout_width="330dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/input"
+        android:ems="10"
+        android:hint="@string/shop"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shop_TV"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/Amount_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/amount"
+        android:layout_marginTop="12dp"
+        android:textSize="20sp"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="@id/shop_ET"
+        app:layout_constraintTop_toBottomOf="@+id/shop_ET" />
+
+    <EditText
+        android:id="@+id/Amount_ET"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:hint="@string/item_amount_list"
+        android:background="@drawable/input"
+        android:ems="12"
+        android:layout_marginTop="12dp"
+        android:inputType="number"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintStart_toStartOf="@id/Amount_TV"
+        app:layout_constraintTop_toBottomOf="@id/Amount_TV"/>
+
+            <TextView
+                android:id="@+id/Price_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/price_of_item"
+                android:textSize="20sp"
+                android:textColor="#000"
+                app:layout_constraintStart_toStartOf="@+id/Amount_ET"
+                app:layout_constraintTop_toBottomOf="@+id/Amount_ET" />
+
+            <EditText
+                android:id="@+id/Price_ET"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:background="@drawable/input"
+                android:ems="12"
+                android:hint="@string/item_currency"
+                android:layout_marginTop="12dp"
+                android:inputType="number"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                app:layout_constraintStart_toStartOf="@+id/Amount_ET"
+                app:layout_constraintTop_toBottomOf="@+id/Price_TV"
+                android:autofillHints="" />
+
+
+    <ImageView
+        android:id="@+id/Img_IV"
+        android:layout_width="320dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/item_image"
+        android:src="@drawable/img"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Price_ET" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/Img_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="75dp"
+        android:clickable="true"
+        android:contentDescription="@string/change_img_btn"
+        android:focusable="true"
+        android:tint="#fff"
+        app:backgroundTint="#848482"
+        app:layout_constraintBottom_toBottomOf="@+id/Img_IV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add_photo" />
+
+    <Button
+        android:id="@+id/Add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="@string/add_to_list"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Img_btn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

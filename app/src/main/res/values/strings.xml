@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Shopping List</string>
+
+    <string name="shopping_list">Shopping List</string>
+    <string name="Item_img">img item</string>
+
+    <string name="add_item">Add Item</string>
+    <string name="name">Name</string>
+    <string name="add_name">Item</string>
+    <string name="shop">Shop</string>
+    <string name="amount">Amount</string>
+    <string name="add_qty">Qty</string>
+    <string name="price_of_item">Price of item</string>
+    <string name="price">Price</string>
+    <string name="kroner">Kroner</string>
+    <string name="item_image">item image</string>
+    <string name="change_img_btn">change img btn</string>
+    <string name="add_to_list">Add to List</string>
+    <string name="add_btn">add btn</string>
+    <string name="share">Share</string>
+    <string name="share_btn">share btn</string>
+    <string name="delete_all">delete_all</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="item_name">Name</string>
+    <string name="item_shop">Shop</string>
+    <string name="item_price">Price</string>
+    <string name="where_to_buy">Where to buy</string>
+    <string name="item_currency">Kr.</string>
+
+    <string name="modify_name">Name</string>
+    <string name="modify_del_img_item">modify del item</string>
+    <string name="modify_shop">Shop</string>
+    <string name="modify_amount">Amount</string>
+    <string name="modify_qty">modify qty</string>
+    <string name="modify_btn">modify btn</string>
+    <string name="modify_price">Price</string>
+    <string name="modify_item">Modify item</string>
+    <string name="modify_currency">Kr.</string>
+    <string name="modify_is_this_bought">Mark as bought</string>
+    <string name="modify_changes">Save changes</string>
+
+    <string name="item_name_list">Item list</string>
+    <string name="item_amount_list">  Pcs.</string>
+    <string name="img_show_list">Img show</string>
+    <string name="edit_btn">Edit btn</string>
+</resources>

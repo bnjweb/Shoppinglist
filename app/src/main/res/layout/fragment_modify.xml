@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D3D3D3">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rectangle"
+        tools:context="com.example.shoppinglist.Fragments.modify.ModifyFragment">
+
+        <TextView
+            android:id="@+id/Modify_headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mont"
+            android:paddingTop="20dp"
+            android:text="@string/modify_item"
+            android:textColor="#000"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/img_del_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/modify_del_img_item"
+            android:tint="#CD5C5C"
+            app:layout_constraintBottom_toBottomOf="@+id/Modify_headline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Modify_headline"
+            app:srcCompat="@drawable/ic_delete" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#9CCC65"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="@string/modify_is_this_bought"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Modify_headline" />
+
+        <TextView
+            android:id="@+id/Modify_name_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/modify_name"
+            android:textColor="#000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/Modify_name_ET"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+        <EditText
+            android:id="@+id/Modify_name_ET"
+            android:layout_width="330dp"
+            android:layout_height="40dp"
+            android:background="@drawable/input"
+            android:ems="10"
+            android:hint="@string/modify_name"
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Modify_name_TV"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/Modify_shop_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/modify_shop"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:paddingTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/Modify_shop_ET"
+            app:layout_constraintTop_toBottomOf="@+id/Modify_name_ET" />
+
+
+        <EditText
+            android:id="@+id/Modify_shop_ET"
+            android:layout_width="330dp"
+            android:layout_height="40dp"
+            android:background="@drawable/input"
+            android:ems="10"
+            android:hint="@string/modify_shop"
+            android:inputType="textPersonName"
+            android:layout_marginTop="5dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Modify_shop_TV"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/Modify_amount_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/modify_amount"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:layout_marginBottom="5dp"
+            android:paddingTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/Modify_amount_ET"
+            app:layout_constraintTop_toBottomOf="@+id/Modify_shop_ET"
+            />
+
+        <EditText
+            android:id="@+id/Modify_amount_ET"
+            android:layout_width="64dp"
+            android:layout_height="40dp"
+            android:background="@drawable/input"
+            android:ems="12"
+            android:hint="@string/modify_qty"
+            android:inputType="number"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@id/Modify_shop_ET"
+            app:layout_constraintTop_toBottomOf="@+id/Modify_amount_TV"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/Modify_price_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/modify_price"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:paddingTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/Modify_amount_ET"
+            app:layout_constraintTop_toBottomOf="@+id/Modify_amount_ET" />
+
+        <EditText
+            android:id="@+id/Modify_price_ET"
+            android:layout_width="64dp"
+            android:layout_height="40dp"
+            android:background="@drawable/input"
+            android:ems="12"
+            android:hint="@string/modify_price"
+            android:inputType="number"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@id/Modify_price_TV"
+            app:layout_constraintTop_toBottomOf="@+id/Modify_price_TV"
+            android:autofillHints="" />
+
+
+        <TextView
+            android:id="@+id/Modify_currency_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:text="@string/modify_currency"
+            app:layout_constraintBottom_toBottomOf="@+id/Modify_price_ET"
+            app:layout_constraintStart_toEndOf="@+id/Modify_price_ET" />
+
+
+
+        <ImageView
+            android:id="@+id/Modify_img"
+            android:layout_width="320dp"
+            android:layout_height="200dp"
+            android:src="@drawable/img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Modify_currency_TV" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/Img_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="76dp"
+            android:clickable="true"
+            android:contentDescription="@string/change_img_btn"
+            android:focusable="true"
+            android:tint="#fff"
+            app:backgroundTint="#848482"
+            app:layout_constraintBottom_toBottomOf="@+id/Modify_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_add_photo" />
+
+        <Button
+            android:id="@+id/Modify_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/button"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="@string/modify_changes"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Modify_img" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

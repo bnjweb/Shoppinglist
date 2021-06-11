@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.shoppinglist.Fragments.list.ListFragment"
+        android:label="ShoppingList"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_modifyFragment"
+            app:destination="@id/modifyFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_ItemFragment"
+            app:destination="@id/ItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.shoppinglist.Fragments.add.AddFragment"
+        android:label="Add to Shopping List"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/modifyFragment"
+
+        android:name="com.example.shoppinglist.Fragments.modify.ModifyFragment"
+        android:label="Edit item"
+        tools:layout="@layout/fragment_modify" >
+        <action
+            android:id="@+id/action_modifyFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <argument
+            android:name="currentItem"
+            app:argType="com.example.shoppinglist.model.Items" />
+    </fragment>
+    <fragment
+        android:id="@+id/ItemFragment"
+
+        android:name="com.example.shoppinglist.Fragments.item.ItemFragment"
+        android:label="Item"
+        tools:layout="@layout/fragment_item" >
+        <action
+            android:id="@+id/action_ItemFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <argument
+            android:name="item"
+            app:argType="com.example.shoppinglist.model.Items" />
+        <action
+            android:id="@+id/action_ItemFragment_to_modifyFragment"
+            app:destination="@id/modifyFragment" />
+    </fragment>
+</navigation>
